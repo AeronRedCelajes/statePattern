@@ -19,13 +19,13 @@ public class SuspendedState implements AccountState{
 
     @Override
     public void activate(Account account) {
-        account.setState(AccountState.activeState());
+        account.setState(new ActiveState());
         System.out.println("Account is activated!");
     }
 
     @Override
     public void close(Account account) {
-        account.setState(AccountState.closedState());
+        account.setState(new ClosedState());
         System.out.println("Account is closed!");
     }
 }
