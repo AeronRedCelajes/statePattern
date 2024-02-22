@@ -99,3 +99,4 @@ public class AccountTest(){
 ```
 
 ## Class Diagram
+![UML State Diagram](https://github.com/AeronRedCelajes/statePattern/assets/142370807/02fbc574-ab4a-4ed4-bbf1-ee8159640f8e)
