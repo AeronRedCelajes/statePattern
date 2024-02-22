@@ -5,14 +5,14 @@ public class ActiveState implements AccountState{
     @Override
     public void deposit(Account account, Double amount) {
         account.setBalance(account.getBalance() + amount);
-        System.out.println("Deposited: " + amount + " Current Balance: " + account.getBalance());
+        System.out.println("Deposited: " + amount);
         account.toString();
     }
 
     @Override
     public void withdraw(Account account, Double amount) {
         account.setBalance(account.getBalance() - amount);
-        System.out.println("Withdraw: " + amount + " Current Balance: " + account.getBalance());
+        System.out.println("Withdraw: " + amount);
         account.toString();
     }
 

@@ -57,7 +57,7 @@ public class Account {
     }
 
     public String toString(){
-        System.out.println("Account Number: " + accountNumber + " Balance: " + balance);
-        return "Account Number: " + accountNumber + " Balance: " + balance;
+        System.out.println("Account Number: " + accountNumber + "\nCurrent Balance: " + balance);
+        return "Account Number: " + accountNumber + "\nCurrent Balance: " + balance;
     }
 }
