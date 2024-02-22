@@ -15,37 +15,45 @@ public class Account {
     public AccountState getState() {
         return accountState;
     }
-
-    public void setBalance(Double balance) {
-        this.balance = balance;
+    
+    public void setState(AccountState accountState) {
+        this.accountState = accountState;
     }
 
     public Double getBalance() {
         return balance;
     }
 
-    public void setState(AccountState accountState) {
-        this.accountState = accountState;
+    public void setBalance(Double balance) {
+        this.balance = balance;
     }
 
-    public void deposit(Account account, Double amount) {
-        accountState.deposit(account, amount);
+    public String getAccountNumber() {
+        return accountNumber;
     }
 
-    public void withdraw(Account account, Double amount) {
-        accountState.withdraw(account, amount);
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
     }
 
-    public void suspend(Account account) {
-        accountState.suspend(account);
+    public void deposit(Double amount) {
+        accountState.deposit(this, amount);
     }
 
-    public void activate(Account account) {
-        accountState.activate(account);
+    public void withdraw(Double amount) {
+        accountState.withdraw(this, amount);
     }
 
-    public void close(Account account) {
-        accountState.close(account);
+    public void suspend() {
+        accountState.suspend(this);
+    }
+
+    public void activate() {
+        accountState.activate(this);
+    }
+
+    public void close() {
+        accountState.close(this);
     }
 
     public String toString(){
